@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: white;
+}
+
+header {
+  font-family: 'Signika Negative';
+    color: black;
+    text-align: center;
+    margin-top: 15px;
+    border-bottom: 1px solid rgba(88, 0, 0, 0.378);
+}
+h1 {
+    font-size: 50px;
+    padding-bottom: 10px;
+}
+.start_statement {
+    font-family: 'Cabin';
+    font-family: 12px;
+    text-align: center;
+}
+p {
+    padding-top: 5px;
+    font-size: 16px;
+}
+
+.diff_colour {
+    color: rgba(88, 0 , 0);
+}
+@media (max-width: 480px) {
+    h1 {
+      font-size: 40px;
+    }
+  }
