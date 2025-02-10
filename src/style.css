@@ -2,37 +2,96 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-body {
+  }
+  body {
     background: white;
-}
-
-header {
-  font-family: 'Signika Negative';
+  }
+  header {
+    font-family: 'Signika Negative';
     color: black;
     text-align: center;
     margin-top: 15px;
-    border-bottom: 1px solid rgba(88, 0, 0, 0.378);
-}
-h1 {
+    border-bottom: 1px solid #58000060;
+  }
+  main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  h1 {
     font-size: 50px;
     padding-bottom: 10px;
-}
-.start_statement {
+  }
+  .start_statement {
     font-family: 'Cabin';
-    font-family: 12px;
     text-align: center;
-}
-p {
-    padding-top: 5px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     font-size: 16px;
-}
-
-.diff_colour {
+  }
+  .diff_colour {
     color: rgba(88, 0 , 0);
-}
-@media (max-width: 480px) {
+  }
+  .time-second {
+    height: 400px;
+    padding-top: 8px;
+    padding-left: 10px;
+    width: 70%;
+    margin: 10px auto;
+  }
+  .first-sentences {
+    font-family: Signika Negative;
+    font-size: 25px;
+    font-weight: 600;
+  }
+  .second-sentence {
+    padding-top: 15px;
+    padding-bottom: 10px;
+    padding-left: 100px;
+    font-family: 'Cabin';
+    font-size: 15px;
+  }
+  .outer {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 35px;
+    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7)
+  }
+  .inner {
+    width: 230px;
+    height: 230px;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px 0.5px 0px rgba(255, 255, 255, 0.7), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+  }
+
+
+  @media (max-width: 720px) {
+    .time-second {
+      height: 300px;
+      width: 90%;
+    }
+  }
+  @media (max-width: 600px) {
+    .time-second {
+      height: 300px;
+      width: 100%;
+    }
+    .second-sentence {
+      padding-left: 60px;
+    }
+  }
+  @media (max-width: 480px) {
     h1 {
       font-size: 40px;
     }
+    .time-second {
+      height: 300px;
+      width: 100%;
+    }
   }
+  
