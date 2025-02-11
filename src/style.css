@@ -55,10 +55,12 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
+    position: relative;
     margin-left: auto;
     margin-right: auto;
     padding: 35px;
-    box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, 0.15), -6px -6px 10px -1px rgba(255, 255, 255, 0.7)
+    box-shadow: 8px 8px 12px -3px rgba(0, 0, 0, 0.15), -8px -8px 12px -3px rgba(255, 255, 255, 0.7);
+        
   }
   .inner {
     width: 230px;
@@ -68,6 +70,17 @@
     margin-right: auto;
     box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px 0.5px 0px rgba(255, 255, 255, 0.7), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
   }
+    circle {
+        fill: none;
+        stroke: url(#GradientColor);
+        stroke-width: 35px;
+
+  }
+    svg {
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
 
 
   @media (max-width: 720px) {
@@ -82,7 +95,7 @@
       width: 100%;
     }
     .second-sentence {
-      padding-left: 60px;
+      padding-left: 40px;
     }
   }
   @media (max-width: 480px) {
