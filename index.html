@@ -21,26 +21,62 @@
       <p class="second-sentence">We've gone...</p>
       <div class="outer">
         <div class="inner">
+          <div id="number1"></div>
          </div>
          <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300px" height="300px">
           <defs>
             <linearGradient id="GradientColor">
               <stop offset="0%" stop-color="red" />
-              <stop offset="50%" stop-color="yellow" />
-              <stop offset="100%" stop-color="green" />
+              <stop offset="30%" stop-color="yellow" />
+              <stop offset="70%" stop-color="green" />
             </linearGradient>
           </defs>
-          <circle cx="150" cy="150" r="132" stroke-linecap="round" id="animatedCircle" />
+          <circle cx="150" cy="150" r="133" stroke-linecap="round" id="animatedCircle1" transform="rotate(-90 150 150)" />
       </svg>
       </div>
       <div class="second-sentence">
         There it goes, never mind.
       </div>
-     
-       
-     
-   
     </div>
+    <div class="gap"></div>
+    <div class="time-minute">
+      <div class="first-sentences">
+        In One Minute
+      </div>
+      </div>
   </main>
+  <script>
+    const circleSecond = document.getElementById('animatedCircle1');
+    const circumferenceSecond = 2 * Math.PI * 133;
+
+    circleSecond.style.strokeDasharray = circumferenceSecond;
+
+    function animateCircle() {
+      let start = null;
+      const duration = 1000; // 1 second
+
+      function step(timestamp) {
+        if (!start) start = timestamp;
+        const progress = timestamp - start;
+        const offsetSecond = circumferenceSecond * (1 - (progress / duration));
+
+        circleSecond.style.strokeDashoffset = offsetSecond;
+        document.getElementById("number1").innerHTML = Math.round(((circumferenceSecond - offsetSecond) / circumferenceSecond) * 100) + "%";
+
+        if (progress < duration) {
+          requestAnimationFrame(step);
+        } else {
+          document.getElementById("number1").innerHTML = "100%";
+          circleSecond.style.strokeDashoffset = 0;
+          start = null; // Reset start time
+          requestAnimationFrame(step);
+        }
+      }
+
+      requestAnimationFrame(step);
+    }
+
+    animateCircle();
+  </script>
 </body>
 </html>

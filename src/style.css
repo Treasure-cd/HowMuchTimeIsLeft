@@ -1,110 +1,137 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background: white;
+}
+header {
+  font-family: 'Signika Negative';
+  color: black;
+  text-align: center;
+  margin-top: 15px;
+  border-bottom: 1px solid #58000060;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+
+}
+h1 {
+  font-size: 50px;
+  padding-bottom: 10px;
+}
+.start_statement {
+  font-family: 'Cabin';
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 16px;
+}
+.diff_colour {
+  color: rgba(88, 0 , 0);
+}
+.time-second {
+  height: 400px;
+  padding-top: 8px;
+  padding-left: 10px;
+  margin-bottom: 50px;
+  width: 70%;
+  margin: 10px auto;
+  position: relative;
+}
+.first-sentences {
+  font-family: Signika Negative;
+  font-size: 25px;
+  font-weight: 600;
+}
+.second-sentence {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  font-family: 'Cabin';
+  font-size: 15px;
+}
+.outer {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 35px;
+  box-shadow: 8px 8px 12px -3px rgba(0, 0, 0, 0.15), -8px -8px 12px -3px rgba(255, 255, 255, 0.7);
+      
+}
+.inner {
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px 0.5px 0px rgba(255, 255, 255, 0.7), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
+}
+  circle {
+      fill: none;
+      stroke: url(#GradientColor);
+      stroke-width: 35px;
+      stroke-dasharray: 835.663458;
+      stroke-dashoffset: 835.663458;
+      
+    
+}
+  svg {
+      top: 0;
+      left: 0;
+      position: absolute;
   }
-  body {
-    background: white;
-  }
-  header {
-    font-family: 'Signika Negative';
-    color: black;
-    text-align: center;
-    margin-top: 15px;
-    border-bottom: 1px solid #58000060;
-  }
-  main {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-  }
-  h1 {
-    font-size: 50px;
-    padding-bottom: 10px;
-  }
-  .start_statement {
+
+  #number1 {
     font-family: 'Cabin';
-    text-align: center;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    font-size: 16px;
+    font-size: 20px;
+    font-weight: 900;
   }
-  .diff_colour {
-    color: rgba(88, 0 , 0);
-  }
-  .time-second {
+
+  .time-minute {
+    margin-top: 90px;
     height: 400px;
-    padding-top: 8px;
+    padding-top: 40px;
     padding-left: 10px;
+    margin-bottom: 50px;
     width: 70%;
     margin: 10px auto;
+    position: relative;
   }
-  .first-sentences {
-    font-family: Signika Negative;
-    font-size: 25px;
-    font-weight: 600;
+
+
+@media (max-width: 720px) {
+  .time-second {
+    height: 300px;
+    width: 90%;
+  }
+}
+@media (max-width: 600px) {
+  .time-second {
+    height: 300px;
+    width: 100%;
   }
   .second-sentence {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 100px;
-    font-family: 'Cabin';
-    font-size: 15px;
+    padding-left: 40px;
   }
-  .outer {
-    width: 300px;
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 40px;
+  }
+  .time-second {
     height: 300px;
-    border-radius: 50%;
-    position: relative;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 35px;
-    box-shadow: 8px 8px 12px -3px rgba(0, 0, 0, 0.15), -8px -8px 12px -3px rgba(255, 255, 255, 0.7);
-        
+    width: 100%;
   }
-  .inner {
-    width: 230px;
-    height: 230px;
-    border-radius: 50%;
-    margin-left: auto;
-    margin-right: auto;
-    box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px 0.5px 0px rgba(255, 255, 255, 0.7), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
-  }
-    circle {
-        fill: none;
-        stroke: url(#GradientColor);
-        stroke-width: 35px;
-
-  }
-    svg {
-        top: 0;
-        left: 0;
-        position: absolute;
-    }
-
-
-  @media (max-width: 720px) {
-    .time-second {
-      height: 300px;
-      width: 90%;
-    }
-  }
-  @media (max-width: 600px) {
-    .time-second {
-      height: 300px;
-      width: 100%;
-    }
-    .second-sentence {
-      padding-left: 40px;
-    }
-  }
-  @media (max-width: 480px) {
-    h1 {
-      font-size: 40px;
-    }
-    .time-second {
-      height: 300px;
-      width: 100%;
-    }
-  }
-  
+}
