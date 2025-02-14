@@ -38,11 +38,32 @@
         There it goes, never mind.
       </div>
     </div>
-    <div class="gap"></div>
+    <!--ONE MINUTE-->
+
     <div class="time-minute">
       <div class="first-sentences">
         In One Minute
       </div>
+      <p class="second-sentence">We've gone <span id="minutePercent"></span>% into the minute.</p>
+      <div class="outer">
+        <div class="inner">
+          <div id="number2"></div>
+
+        </div>
+        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="300px" height="300px">
+          <defs>
+            <linearGradient id="GradientColor2">
+              <stop offset="0%" stop-color="red" />
+              <stop offset="30%" stop-color="yellow" />
+              <stop offset="70%" stop-color="green" />
+            </linearGradient>
+          </defs>
+          <circle cx="150" cy="150" r="133" stroke-linecap="round" id="animatedCircle2" transform="rotate(-90 150 150)" />
+        </svg>
+         </div>
+         <div class="second-sentence">
+          Which means there are <span id="remainingMin"></span> seconds left.
+        </div>
       </div>
   </main>
   <script>
@@ -77,6 +98,21 @@
     }
 
     animateCircle();
+
+    function minutes () {
+      const circleMinute = document.getElementById('animatedCircle2');
+    circumferenceMin = 2 * Math.PI * 133;
+    let date = new Date;
+    let secs = date.getSeconds() + 1;
+    let secsPercent =  (secs/60);
+      document.getElementById("minutePercent").innerHTML = Math.round(secsPercent * 100);
+      document.getElementById("remainingMin").innerHTML = 60 - secs;
+      document.getElementById("number2").innerHTML = Math.round(secsPercent * 100) + "%";
+    circleMinute.style.strokeDashoffset = circumferenceSecond - (secsPercent * circumferenceSecond);
+
+    requestAnimationFrame(minutes)
+    }
+requestAnimationFrame(minutes)
   </script>
 </body>
 </html>

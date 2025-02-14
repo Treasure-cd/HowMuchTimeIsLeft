@@ -19,7 +19,6 @@ main {
   justify-content: center;
   height: 100%;
   width: 100%;
-
 }
 h1 {
   font-size: 50px;
@@ -36,10 +35,10 @@ h1 {
   color: rgba(88, 0 , 0);
 }
 .time-second {
-  height: 400px;
+  height: 450px;
   padding-top: 8px;
   padding-left: 10px;
-  margin-bottom: 50px;
+  padding-bottom: 50px;
   width: 70%;
   margin: 10px auto;
   position: relative;
@@ -50,11 +49,13 @@ h1 {
   font-weight: 600;
 }
 .second-sentence {
-  padding-top: 20px;
+padding-top: 20px;
   padding-bottom: 20px;
   padding-left: 100px;
   font-family: 'Cabin';
   font-size: 15px;
+  position: relative;
+  z-index: 1; /* Ensure the div is on top */
 }
 .outer {
   width: 300px;
@@ -65,7 +66,6 @@ h1 {
   margin-right: auto;
   padding: 35px;
   box-shadow: 8px 8px 12px -3px rgba(0, 0, 0, 0.15), -8px -8px 12px -3px rgba(255, 255, 255, 0.7);
-      
 }
 .inner {
   width: 230px;
@@ -78,48 +78,61 @@ h1 {
   display: flex;
   box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, 0.2), inset -4px -4px 6px -1px rgba(255, 255, 255, 0.7), -0.5px 0.5px 0px rgba(255, 255, 255, 0.7), 0.5px 0.5px 0px rgba(0, 0, 0, 0.15), 0px 12px 10px -10px rgba(0, 0, 0, 0.05);
 }
-  circle {
-      fill: none;
-      stroke: url(#GradientColor);
-      stroke-width: 35px;
-      stroke-dasharray: 835.663458;
-      stroke-dashoffset: 835.663458;
-      
-    
+#animatedCircle1 {
+  fill: none;
+  stroke: url(#GradientColor);
+  stroke-width: 35px;
+  stroke-dasharray: 835.663458;
+  stroke-dashoffset: 835.663458;
 }
-  svg {
-      top: 0;
-      left: 0;
-      position: absolute;
-  }
-
-  #number1 {
-    font-family: 'Cabin';
-    font-size: 20px;
-    font-weight: 900;
-  }
-
-  .time-minute {
-    margin-top: 90px;
-    height: 400px;
-    padding-top: 40px;
-    padding-left: 10px;
-    margin-bottom: 50px;
-    width: 70%;
-    margin: 10px auto;
-    position: relative;
-  }
-
-
+#animatedCircle2 {
+  fill: none;
+  stroke: url(#GradientColor2);
+  stroke-width: 35px;
+  stroke-dasharray: 835.663458;
+  stroke-dashoffset: 835.663458;
+}
+svg {
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+#number1 {
+  font-family: 'Cabin';
+  font-size: 20px;
+  font-weight: 900;
+}
+#number2 {
+  font-family: 'Cabin';
+  font-size: 20px;
+  font-weight: 900;
+}
+.time-minute {
+  height: 450px;
+  padding-left: 10px;
+  margin-bottom: 50px;
+  width: 70%;
+  margin: 10px auto;
+  position: relative;
+  z-index: 0;
+}
 @media (max-width: 720px) {
   .time-second {
-    height: 300px;
+    height: 450px;
+    width: 90%;
+  }
+  .time-minut {
+    height: 450px;
     width: 90%;
   }
 }
 @media (max-width: 600px) {
   .time-second {
-    height: 300px;
+    height: 450px;
+    width: 100%;
+  }
+  .time-minute {
+    height: 450px;
     width: 100%;
   }
   .second-sentence {
@@ -131,7 +144,12 @@ h1 {
     font-size: 40px;
   }
   .time-second {
-    height: 300px;
+    height: 450px;
+    width: 100%;
+  }
+  .time-minute {
+    height: 450px;
     width: 100%;
   }
 }
+
